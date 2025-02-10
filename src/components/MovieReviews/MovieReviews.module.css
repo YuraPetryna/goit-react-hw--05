@@ -1,0 +1,13 @@
+.reviews {
+  padding: 10px;
+}
+
+.reviewItem {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+
+.reviewItem h4 {
+  margin-bottom: 5px;
+}

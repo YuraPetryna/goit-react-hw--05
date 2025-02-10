@@ -1,0 +1,30 @@
+.container {
+  padding: 20px;
+}
+
+.goBack {
+  display: inline-block;
+  margin-bottom: 15px;
+  text-decoration: none;
+  color: blue;
+}
+
+.details {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.details img {
+  width: 300px;
+  border-radius: 10px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin: 10px 0;
+}

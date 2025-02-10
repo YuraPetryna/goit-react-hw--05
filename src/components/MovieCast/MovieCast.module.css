@@ -1,0 +1,14 @@
+.castList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.castItem {
+  text-align: center;
+}
+
+.castItem img {
+  width: 100px;
+  border-radius: 10px;
+}
