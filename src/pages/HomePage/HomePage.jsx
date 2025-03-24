@@ -12,7 +12,7 @@ const HomePage = () => {
 
   return (
     <div className={styles.page}>
-      <h1>Trending Movies</h1>
+      <h1 className={styles.title}>Trending Movies</h1>
       <MovieList movies={movies} />
     </div>
   );

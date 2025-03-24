@@ -4,18 +4,29 @@
 
 .form {
   display: flex;
+  justify-content: center;
   gap: 10px;
 }
 
 .input {
   padding: 8px;
   font-size: 16px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
 }
-
+.input:focus {
+  outline: none;
+  border-color: rgb(182, 58, 182);
+}
 .button {
   padding: 8px;
-  background-color: #007bff;
+  border-radius: 10px;
+  background-color: rgb(182, 58, 182);
   color: white;
   border: none;
   cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+.button:hover {
+  background-color: rgb(151, 6, 132);
 }

@@ -1,4 +1,4 @@
-import { useEffect, useState, Suspense, lazy } from "react";
+import { useEffect, useState, Suspense } from "react";
 import { useParams, Link, Outlet, useLocation } from "react-router-dom";
 import axios from "axios";
 import styles from "./MovieDetailsPage.module.css";
@@ -31,33 +31,35 @@ const MovieDetailsPage = () => {
       <Link to={backLink} className={styles.goBack}>
         ← Go back
       </Link>
-      <div className={styles.details}>
-        <img
-          src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-          alt={movie.title}
-        />
-        <div>
+      <div className={styles.content}>
+        <div className={styles.details}>
+          <img
+            src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+            alt={movie.title}
+          />
+        </div>
+        <div className={styles.info}>
           <h1>{movie.title}</h1>
           <p>{movie.overview}</p>
           <h3>Genres:</h3>
           <p>{movie.genres.map((genre) => genre.name).join(", ")}</p>
         </div>
+        <div className={styles.additional}>
+          <h2>Additional Information</h2>
+          <ul className={styles.list}>
+            <li className={styles.item}>
+              <Link to="cast" state={{ from: backLink }}>
+                Cast
+              </Link>
+            </li>
+            <li className={styles.item}>
+              <Link to="reviews" state={{ from: backLink }}>
+                Reviews
+              </Link>
+            </li>
+          </ul>
+        </div>
       </div>
-
-      <h2>Additional Information</h2>
-      <ul>
-        <li>
-          <Link to="cast" state={{ from: backLink }}>
-            Cast
-          </Link>
-        </li>
-        <li>
-          <Link to="reviews" state={{ from: backLink }}>
-            Reviews
-          </Link>
-        </li>
-      </ul>
-
       <Suspense fallback={<p>Loading additional content...</p>}>
         <Outlet />
       </Suspense>

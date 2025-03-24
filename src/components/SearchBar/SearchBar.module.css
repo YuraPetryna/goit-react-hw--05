@@ -1,9 +1,9 @@
 .searchForm {
   display: flex;
+
   gap: 10px;
   margin-bottom: 20px;
 }
-
 .input {
   padding: 10px;
   width: 300px;

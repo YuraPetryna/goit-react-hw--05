@@ -3,3 +3,9 @@
   background-color: #fff;
   border-radius: 10px;
 }
+.title {
+  display: block;
+  text-align: center;
+  font-size: 54px;
+  margin-bottom: 20px;
+}
