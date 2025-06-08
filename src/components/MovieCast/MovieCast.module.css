@@ -6,9 +6,11 @@
 
 .castItem {
   text-align: center;
+  width: 100px;
 }
 
 .castItem img {
   width: 100px;
+  height: 150px;
   border-radius: 10px;
 }

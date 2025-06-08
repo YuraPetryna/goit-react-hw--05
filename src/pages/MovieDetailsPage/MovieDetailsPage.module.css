@@ -1,5 +1,6 @@
 .container {
-  padding: 20px;
+  margin: 20px;
+  min-height: 100dvh;
 }
 .content {
   display: flex;
@@ -7,10 +8,18 @@
   gap: 20px;
 }
 .goBack {
+  border: 1px solid blue;
+  padding: 5px 10px;
+  border-radius: 15px;
   display: inline-block;
   margin-bottom: 15px;
   text-decoration: none;
   color: blue;
+  transition: all 0.3s ease;
+}
+.goBack:hover {
+  background-color: blue;
+  color: white;
 }
 .info {
   border-radius: 10px;

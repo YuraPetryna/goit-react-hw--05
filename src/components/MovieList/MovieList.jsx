@@ -1,6 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import styles from "./MovieList.module.css";
-
+import noImage from "../../../public/no-image.svg";
 const IMAGE_BASE_URL = "https://image.tmdb.org/t/p/w500";
 
 const MovieList = ({ movies }) => {
@@ -12,11 +12,7 @@ const MovieList = ({ movies }) => {
         <li key={id} className={styles.item}>
           <Link to={`/movies/${id}`} state={{ from: location }}>
             <img
-              src={
-                poster_path
-                  ? `${IMAGE_BASE_URL}${poster_path}`
-                  : "https://via.placeholder.com/300x450?text=No+Image"
-              }
+              src={poster_path ? `${IMAGE_BASE_URL}${poster_path}` : noImage}
               alt={title}
               className={styles.poster}
             />

@@ -2,10 +2,14 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f5f5f5;
+  background-image: linear-gradient(
+    109.6deg,
+    rgba(247, 237, 7, 1) 11.2%,
+    rgba(0, 168, 219, 1) 100.2%
+  );
   color: #333;
 }
-
+/* 
 div {
   max-width: 600px;
   margin: 40px auto;
@@ -20,4 +24,4 @@ h1 {
   font-size: 28px;
   margin-bottom: 20px;
   color: #333;
-}
+} */

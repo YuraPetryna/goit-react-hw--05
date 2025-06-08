@@ -1,5 +1,11 @@
 .page {
   padding: 20px;
+  background-image: linear-gradient(
+    109.6deg,
+    rgba(247, 237, 7, 1) 11.2%,
+    rgba(0, 168, 219, 1) 100.2%
+  );
+  min-height: 100dvh;
 }
 
 .form {
@@ -16,7 +22,7 @@
 }
 .input:focus {
   outline: none;
-  border-color: rgb(182, 58, 182);
+  border-color: rgb(146, 62, 146);
 }
 .button {
   padding: 8px;
