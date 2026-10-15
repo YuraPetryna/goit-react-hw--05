@@ -14,7 +14,7 @@ const MovieList = ({ movies }) => {
 
   return (
     <ul className={styles.list}>
-      {movies.map(({ id, title, poster_path, vote_average }) => (
+      {movies.map(({ id, title, title_uk, poster_path, vote_average }) => (
         <li key={id} className={styles.item}>
           <Link to={`/movies/${id}`} state={{ from: location }}>
             <div className={styles.posterWrap}>
@@ -35,6 +35,7 @@ const MovieList = ({ movies }) => {
               )}
             </div>
             <p className={styles.title}>{title}</p>
+            {title_uk && <p className={styles.titleUk}>{title_uk}</p>}
           </Link>
         </li>
       ))}

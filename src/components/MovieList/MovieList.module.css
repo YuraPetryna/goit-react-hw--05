@@ -66,6 +66,17 @@
   overflow: hidden;
 }
 
+.titleUk {
+  margin: 2px 2px 0;
+  font-size: 14px;
+  line-height: 1.3;
+  color: var(--muted);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
 .item a:hover .title {
   color: var(--accent);
 }
