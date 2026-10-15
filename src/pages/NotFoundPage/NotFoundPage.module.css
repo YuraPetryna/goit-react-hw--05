@@ -1,14 +1,21 @@
 .container {
-  text-align: center;
-  margin-top: 50px;
+  max-width: var(--page-width);
+  margin: 0 auto;
+  padding: 80px 24px;
+}
+
+.container h1 {
+  font-size: clamp(36px, 6vw, 64px);
+  font-weight: 800;
 }
 
 .homeLink {
   display: inline-block;
-  margin-top: 20px;
-  padding: 10px 20px;
-  background-color: #ff4500;
-  color: white;
+  margin-top: 24px;
+  padding: 12px 24px;
+  background: var(--accent);
+  color: var(--accent-ink);
+  font-weight: 600;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 999px;
 }

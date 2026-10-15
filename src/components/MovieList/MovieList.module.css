@@ -1,63 +1,71 @@
 .list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  list-style: none;
-  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 28px 20px;
 }
 
-.item {
-  width: calc((100% - 41px) / 5);
-  cursor: pointer;
-  margin: 0;
-  transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
-}
-.item:hover {
-  transform: scale(1.02);
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-  .title {
-    background-color: rgb(151, 6, 132);
-    color: white;
-  }
-}
 .item a {
+  display: block;
   text-decoration: none;
   color: inherit;
 }
-.link {
-  text-decoration: none;
-  color: #007bff;
+
+.posterWrap {
+  position: relative;
+  aspect-ratio: 2 / 3;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  transition: border-color 0.25s ease, transform 0.25s ease;
 }
+
 .poster {
   width: 100%;
-  border-radius: 15px;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
+
+.item a:hover .posterWrap {
+  border-color: var(--accent);
+  transform: translateY(-4px);
+}
+
+.rating {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 9px;
+  border-radius: 999px;
+  background: rgba(15, 18, 24, 0.82);
+  backdrop-filter: blur(6px);
+  font-weight: 600;
+  font-size: 14px;
+  font-variant-numeric: tabular-nums;
+}
+
+.star {
+  width: 14px;
+  height: 14px;
+  fill: var(--accent);
+}
+
 .title {
-  transition: background-color 0.5s ease-in-out, color 0.2s ease-in-out;
-  margin-top: 5px;
-  font-size: 24px;
-  text-align: center;
-  margin: 0;
-  border: gray solid 2px;
-  border-radius: 15px;
-  color: gray;
-  padding: 5px;
+  margin: 12px 2px 0;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--text);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
-.p {
-  text-decoration: none;
-}
-.a {
-  padding: 0;
-}
-@media screen and (max-width: 768px) {
-  .item {
-    width: calc((100% - 20px) / 3);
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .item {
-    width: calc((100% - 10px) / 2);
-  }
+.item a:hover .title {
+  color: var(--accent);
 }

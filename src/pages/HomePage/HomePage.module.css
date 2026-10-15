@@ -1,10 +1,11 @@
 .page {
-  padding: 20px;
-  border-radius: 10px;
+  max-width: var(--page-width);
+  margin: 0 auto;
+  padding: 24px 24px 64px;
 }
+
 .title {
-  display: block;
-  text-align: center;
-  font-size: 54px;
-  margin-bottom: 20px;
+  font-size: clamp(36px, 6vw, 64px);
+  font-weight: 800;
+  margin-bottom: 32px;
 }

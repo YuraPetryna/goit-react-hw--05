@@ -1,16 +1,24 @@
 .castList {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+  gap: 20px 14px;
 }
 
 .castItem {
   text-align: center;
-  width: 100px;
 }
 
 .castItem img {
-  width: 100px;
-  height: 150px;
-  border-radius: 10px;
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  border-radius: 12px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+}
+
+.castItem p {
+  margin: 8px 0 0;
+  font-size: 14px;
+  line-height: 1.3;
 }

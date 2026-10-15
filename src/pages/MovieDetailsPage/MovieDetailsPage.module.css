@@ -1,75 +1,121 @@
 .container {
-  margin: 20px;
-  min-height: 100dvh;
-}
-.content {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-}
-.goBack {
-  border: 1px solid blue;
-  padding: 5px 10px;
-  border-radius: 15px;
-  display: inline-block;
-  margin-bottom: 15px;
-  text-decoration: none;
-  color: blue;
-  transition: all 0.3s ease;
-}
-.goBack:hover {
-  background-color: blue;
-  color: white;
-}
-.info {
-  border-radius: 10px;
-  padding: 20px;
-}
-.details img {
-  border-radius: 10px;
-  width: 100%;
-  max-width: 300px;
-  display: block;
+  max-width: var(--page-width);
   margin: 0 auto;
+  padding: 24px 24px 64px;
 }
 
-ul {
-  list-style: none;
-  padding: 0;
-}
-.item a {
+.goBack {
+  display: inline-block;
+  margin-bottom: 24px;
+  padding: 8px 18px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--muted);
   text-decoration: none;
-  color: inherit;
-  padding: 10px;
-}
-.item:hover {
-  background-color: rgb(151, 6, 132);
-  color: white;
+  font-weight: 600;
+  transition: color 0.2s ease, border-color 0.2s ease;
 }
 
-.item {
-  transition: all 0.5s ease;
-  margin: 10px 0;
-  border: gray solid 2px;
-  padding: 10px;
-  border-radius: 8px;
+.goBack:hover {
+  color: var(--accent);
+  border-color: var(--accent);
 }
-.details {
-  flex: 1;
+
+.content {
+  display: grid;
+  grid-template-columns: minmax(220px, 320px) 1fr;
+  gap: 40px;
+  align-items: start;
 }
+
+.poster {
+  width: 100%;
+  display: block;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+}
+
+.info h1 {
+  font-size: clamp(30px, 4.5vw, 52px);
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.rating {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0 0 20px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.rating svg {
+  width: 18px;
+  height: 18px;
+  fill: var(--accent);
+}
+
+.rating span {
+  color: var(--muted);
+  font-weight: 400;
+}
+
+.overview {
+  max-width: 62ch;
+  margin: 0 0 24px;
+}
+
+.genres {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 32px;
+}
+
+.genre {
+  padding: 4px 14px;
+  border-radius: 999px;
+  background: var(--surface-hi);
+  font-size: 14px;
+}
+
+.additional h2 {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
 .list {
   display: flex;
   gap: 10px;
 }
-.info,
-.additional {
-  flex: 1;
-  padding: 20px;
-  border-radius: 8px;
-  border: gray solid 2px;
+
+.item a {
+  display: block;
+  padding: 8px 20px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease, border-color 0.2s ease;
 }
+
+.item a:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.extra {
+  margin-top: 48px;
+}
+
 @media screen and (max-width: 768px) {
   .content {
-    flex-direction: column;
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .poster {
+    max-width: 260px;
   }
 }

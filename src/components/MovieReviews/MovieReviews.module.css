@@ -1,13 +1,27 @@
 .reviews {
-  padding: 10px;
+  max-width: 75ch;
+}
+
+.empty {
+  color: var(--muted);
 }
 
 .reviewItem {
-  border-bottom: 1px solid #ccc;
-  margin-bottom: 10px;
-  padding-bottom: 10px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.reviewItem:first-child {
+  padding-top: 0;
 }
 
 .reviewItem h4 {
-  margin-bottom: 5px;
+  margin: 0 0 8px;
+  font-size: 18px;
+}
+
+.reviewItem p {
+  margin: 0;
+  color: var(--muted);
+  white-space: pre-line;
 }
